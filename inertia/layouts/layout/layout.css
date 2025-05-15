@@ -1,0 +1,28 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 40px var(--container-padding);
+}
+
+/* Pour les pages qui ont besoin d'un fond différent ou d'une largeur complète */
+.main.full-width {
+  max-width: none;
+  padding: 0;
+}
+
+/* Pour les pages qui ont besoin d'un espacement différent */
+.main.compact {
+  padding: 24px var(--container-padding);
+}
+
+.main.spacious {
+  padding: 64px var(--container-padding);
+}
