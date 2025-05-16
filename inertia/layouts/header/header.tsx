@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from '@inertiajs/react'
+import Logo from '../../assets/svg/logo'
 import './header.css'
 
 export default function Header() {
@@ -7,9 +8,7 @@ export default function Header() {
     <header className="header">
       <nav className="nav-container">
         <div className="nav-left">
-          <Link href="/" className="nav-logo">
-            VSC Instance
-          </Link>
+          
           
           <div className="nav-links">
             <Link href="/" className="nav-link">
@@ -23,7 +22,9 @@ export default function Header() {
             </Link>
           </div>
         </div>
-
+        <Link href="/" className="nav-logo">
+            <Logo />
+          </Link>
         <div className="nav-right">
           <a 
             href="https://github.com/yourusername/vscode-instance-manager" 

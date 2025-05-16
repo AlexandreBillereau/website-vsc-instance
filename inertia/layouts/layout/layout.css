@@ -1,7 +1,15 @@
+:root {
+  --container-width: 1400px;
+  --container-padding: 24px;
+}
+
 .layout {
+  overflow-x: hidden;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  font-family: var(--font-family);
+  background-color: var(--color-bg-secondary);
 }
 
 .main {
@@ -10,6 +18,7 @@
   max-width: var(--container-width);
   margin: 0 auto;
   padding: 40px var(--container-padding);
+  background-color: var(--color-bg-primary);
 }
 
 /* Pour les pages qui ont besoin d'un fond différent ou d'une largeur complète */
