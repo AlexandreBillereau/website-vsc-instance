@@ -15,7 +15,6 @@
 .main {
   flex: 1;
   width: 100%;
-  max-width: var(--container-width);
   margin: 0 auto;
   padding: 40px var(--container-padding);
   background-color: var(--color-bg-primary);
