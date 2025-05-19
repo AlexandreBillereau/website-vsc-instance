@@ -40,6 +40,16 @@ const HeroBanner = () => {
                         <RocketSvg />
                     </button>
                 </div>
+                <div className="hero-row-content">
+                    <div className="hero-row-content-left">
+                        <h1>Vs Instance</h1>
+                    </div>
+                    <div className="hero-row-content-right">
+                        <h1>Effortlessly manage multiple <br /> VSCode and Fork instances.</h1>
+                        <p>Create isolated environments for each project. Customize, sync, <br /> and switch with total freedom.</p>
+                        <button className="hero-row-content-right-button"><span>Features</span></button>
+                    </div>
+                </div>
             </div>
         </div>
     );
