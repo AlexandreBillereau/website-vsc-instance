@@ -1,11 +1,13 @@
 import "./heroBanner.css";
 import RocketSvg from "../../assets/svg/rocket";
-import gsap from 'gsap';
+import { gsap } from "gsap/dist/gsap";
 import { useGSAP } from '@gsap/react';
 import { useRef } from "react";
 
 
+
 const HeroBanner = () => {
+
     const heroRowDownloadLeft = useRef<HTMLElement>(null);
 
     useGSAP(() => {
@@ -25,6 +27,22 @@ const HeroBanner = () => {
             onUpdate: () => {
             }
         });
+
+        //overflow title
+        gsap.from(".text-from-bottom-text", {
+            y: 100,
+            duration: 1,
+            delay: 1,
+            ease: "expo.out",
+        })
+        gsap.to(".text-from-bottom-text", {
+            y: 0,
+            duration: 1,
+            delay: 1,
+            ease: "expo.out",
+        });
+        
+       
     });
 
     return(
@@ -41,10 +59,16 @@ const HeroBanner = () => {
                     </button>
                 </div>
                 <div className="hero-row-content">
-                    <div className="hero-row-content-left">
-                        <h1>Vs Instance</h1>
+                    <div className="hero-row-content-left ">
+                        <div className="hero-row-content-version-text">
+                            <span>v.1.0.0</span>
+                        </div>
+                        <div className="text-from-bottom">
+                            <h1 className="text-from-bottom-text">Vs Instance</h1>
+                        </div>
                     </div>
                     <div className="hero-row-content-right">
+                        <div className="text-from-bottom">  </div>
                         <h1>Effortlessly manage multiple <br /> VSCode and Fork instances.</h1>
                         <p>Create isolated environments for each project. Customize, sync, <br /> and switch with total freedom.</p>
                         <button className="hero-row-content-right-button"><span>Features</span></button>
