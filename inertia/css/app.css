@@ -165,3 +165,14 @@ html {
   max-width: var(--container-width);
   padding: 0 var(--container-padding);
 }
+
+
+@media (max-width: 768px) {
+  .content-wrapper-dark {
+    padding: 0;
+  }
+
+  .content-wrapper-dark > * {
+    padding: 0;
+  }
+}
