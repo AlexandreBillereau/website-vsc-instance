@@ -1,0 +1,124 @@
+/* DetailedFeatureSection.css */
+
+.detailed-feature-section-wrapper {
+    width: 100%;
+    padding: 40px 0; /* Vertical padding for the whole section */
+    background-color: var(--color-bg-secondary); /* Light background for the section */
+    color: var(--color-text);
+}
+
+.detailed-feature-section-container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+.detailed-feature-section-main-title {
+    font-family: 'ChakraPetch', sans-serif;
+    font-size: 2.5em; /* Adjust as needed */
+    font-weight: 700;
+    color: var(--color-text);
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 20px;
+}
+
+.feature-detail-item {
+    background-color: var(--color-bg-primary); /* Card-like background for each feature */
+    border: 1px solid var(--color-border);
+    border-radius: 6px; /* Common GitHub border-radius */
+    padding: 24px;
+    margin-bottom: 30px;
+    box-shadow: var(--shadow-card);
+}
+
+.feature-detail-item:last-child {
+    margin-bottom: 0;
+}
+
+.feature-detail-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.feature-detail-icon-emoji,
+.feature-detail-icon-svg {
+    font-size: 1.8em; /* For emoji icons */
+    margin-right: 12px;
+    color: var(--color-primary); /* Use primary color for icons */
+    line-height: 1;
+}
+
+.feature-detail-icon-svg svg {
+    width: 28px; /* Adjust if using SVG components */
+    height: 28px;
+    fill: currentColor;
+}
+
+.feature-detail-title {
+    font-family: 'ChakraPetch', sans-serif;
+    font-size: 1.5em; /* e.g., 24px */
+    font-weight: 600;
+    color: var(--color-text); /* Darker text for titles */
+    margin: 0; /* Reset margin if any from global h3 styles */
+}
+
+.feature-detail-description {
+    font-family: var(--font-family); /* Main app font for readability */
+    font-size: 1em; /* e.g., 16px */
+    line-height: 1.7;
+    color: var(--color-text-subtle); /* Slightly lighter text for descriptions */
+}
+
+.feature-detail-description p {
+    margin-bottom: 10px;
+}
+
+.feature-detail-description p:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .detailed-feature-section-main-title {
+        font-size: 2em;
+        margin-bottom: 30px;
+        padding-bottom: 15px;
+    }
+
+    .feature-detail-item {
+        padding: 20px;
+    }
+
+    .feature-detail-title {
+        font-size: 1.3em;
+    }
+
+    .feature-detail-icon-emoji,
+    .feature-detail-icon-svg {
+        font-size: 1.6em;
+        margin-right: 10px;
+    }
+    .feature-detail-icon-svg svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .feature-detail-description {
+        font-size: 0.95em;
+    }
+}
+
+@media (max-width: 480px) {
+    .detailed-feature-section-main-title {
+        font-size: 1.8em;
+    }
+    .feature-detail-title {
+        font-size: 1.2em;
+    }
+    .feature-detail-description {
+        font-size: 0.9em;
+    }
+} 

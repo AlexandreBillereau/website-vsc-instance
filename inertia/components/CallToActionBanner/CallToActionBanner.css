@@ -1,0 +1,105 @@
+/* CallToActionBanner.css */
+
+.cta-banner-wrapper {
+    width: 100%;
+    padding: 60px 0; /* Generous padding for impact */
+    /* Example gradient: from primary to a lighter shade or a complementary color */
+    /* Adjust these colors to match your desired gradient */
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-hover) 100%);
+    /* You can also use a more complex gradient like in HeroBanner */
+    /* background: linear-gradient(to bottom left, #0C66E4, #FFFFFF); */
+    position: relative; /* For potential pseudo-elements like noise */
+    text-align: center;
+    overflow: hidden; /* In case of any hover effects on button */
+}
+
+/* Optional: Noise overlay similar to HeroBanner if desired */
+/*
+.cta-banner-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../assets/images/noise.png'); 
+    opacity: 0.1; // Adjust opacity as needed
+    pointer-events: none;
+    z-index: 0;
+}
+.cta-banner-wrapper > * {
+    position: relative;
+    z-index: 1;
+}
+*/
+
+.cta-banner-container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta-banner-subtext {
+    font-family: var(--font-family); /* Regular app font */
+    font-size: 1.2em; /* e.g., 18px-20px */
+    color: #ffffff; /* White text on dark gradient */
+    opacity: 0.9;
+    margin-bottom: 25px;
+    max-width: 600px; /* Constrain width for readability */
+}
+
+.cta-banner-button {
+    font-family: 'ChakraPetch', sans-serif;
+    font-size: 2.8em; /* Large, prominent text, e.g., 40-50px */
+    font-weight: 700; /* Bold */
+    color: #ffffff; /* White text */
+    text-decoration: none;
+    padding: 15px 40px;
+    border: 2px solid #ffffff; /* White border */
+    border-radius: 8px; /* Slightly rounded corners */
+    background-color: transparent; /* Transparent background, gradient shows through */
+    transition: all 0.3s ease;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta-banner-button:hover, 
+.cta-banner-button:focus {
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle hover effect */
+    color: #ffffff;
+    border-color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .cta-banner-wrapper {
+        padding: 50px 0;
+    }
+    .cta-banner-subtext {
+        font-size: 1.1em;
+        margin-bottom: 20px;
+    }
+    .cta-banner-button {
+        font-size: 2.2em;
+        padding: 12px 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-banner-wrapper {
+        padding: 40px 0;
+    }
+    .cta-banner-subtext {
+        font-size: 1em;
+    }
+    .cta-banner-button {
+        font-size: 1.8em;
+        padding: 10px 25px;
+    }
+} 
