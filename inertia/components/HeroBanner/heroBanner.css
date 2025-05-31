@@ -205,3 +205,119 @@
     will-change: transform;
     width: fit-content;
 }
+
+/* --- Responsive Styles --- */
+@media (max-width: 768px) {
+    .hero-row-download {
+        flex-direction: column;
+    }
+
+    .hero-row-download-left {
+        font-size: 24px; /* Adjusted font size */
+        padding: 12px;
+        text-align: center; /* Center text when stacked */
+        border-right: 1px solid #fff; /* Ensure right border is present */
+    }
+
+    .hero-row-download-button {
+        font-size: 24px; /* Adjusted font size */
+        padding: 12px;
+        border-left: 1px solid #fff; /* Ensure left border */
+        border-top: 1px solid #fff; /* Add top border when stacked */
+    }
+
+    .hero-row-download-button svg {
+        width: 20px; /* Slightly smaller icon */
+        height: 20px;
+    }
+
+    .hero-row-content {
+        flex-direction: column;
+    }
+
+    .hero-row-content-left {
+        width: 100%; /* Full width when stacked */
+        min-height: auto; /* Adjust height as needed */
+        padding: 20px 0; /* Add some vertical padding */
+        font-size: 30px; /* Adjusted font size */
+        border-right: 1px solid #fff; /* Keep right border */
+        /* border-left is already there */
+    }
+
+    .hero-row-content-version-text {
+        font-size: 9px;
+        padding: 4px 8px;
+        top: 10px;
+        right: 10px;
+    }
+
+    .hero-row-content-right {
+        width: 100%; /* Full width when stacked */
+        padding: 20px; /* Adjusted padding */
+        border-left: 1px solid #fff; /* Add left border */
+        border-top: 1px solid #fff; /* Add top border */
+        /* border-right is already there */
+        align-items: center; /* Center content */
+        text-align: center; /* Center text */
+    }
+
+    .hero-row-content-right h1 {
+        font-size: 20px; /* Adjusted font size */
+    }
+
+    .hero-row-content-right p {
+        font-size: 14px; /* Adjusted font size */
+    }
+
+    .hero-row-content-right-button {
+        font-size: 18px; /* Adjusted font size */
+        padding: 8px;
+    }
+
+    .hero-container {
+        padding: 0 10px; /* Reduce container padding on mobile */
+    }
+
+    .hero-nav {
+        min-height: 60px; /* Adjust nav height */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-row-download-left {
+        font-size: 18px; /* Further reduce font size for very small screens */
+        padding: 10px;
+    }
+
+    .hero-row-download-button {
+        font-size: 18px; /* Further reduce font size */
+        padding: 10px;
+    }
+
+    .hero-row-download-button svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .hero-row-content-left {
+        font-size: 24px; /* Further reduce font size */
+        padding: 15px 0;
+    }
+
+    .hero-row-content-right h1 {
+        font-size: 18px; /* Further reduce font size */
+    }
+
+    .hero-row-content-right p {
+        font-size: 13px; /* Further reduce font size */
+    }
+
+    .hero-row-content-right-button {
+        font-size: 16px; /* Further reduce font size */
+    }
+
+    .hero-row-content-version-text {
+        font-size: 8px;
+        padding: 3px 6px;
+    }
+}
