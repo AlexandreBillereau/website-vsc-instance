@@ -4,6 +4,7 @@ import { gsap } from "gsap/dist/gsap";
 import { useGSAP } from '@gsap/react';
 import { useRef } from "react";
 import ButtonSlider from "../ButtonSlider/ButtonSlider";
+import { FeatureGrid2Items } from "../FeatureGrid/FeatureGrid";
 
 
 const HeroBanner = () => {
@@ -75,6 +76,7 @@ const HeroBanner = () => {
                     </div>
                 </div>
                 <ButtonSlider mainText="Git hub" slidingText="Contribute to the project . Download the source code from github . Give us some feedback . Help us improve the project . Make it better for everyone . Thank you for your support .&nbsp;" />
+                <FeatureGrid2Items  />
             </div>
         </div>
     );

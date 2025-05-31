@@ -151,3 +151,17 @@ html {
   overflow-x: hidden;
   box-sizing: border-box;
 }
+
+.content-wrapper-dark {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 var(--container-padding);
+  background-color: var(--color-text);
+}
+
+.content-wrapper-dark > * {
+  max-width: var(--container-width);
+  padding: 0 var(--container-padding);
+}

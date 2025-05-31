@@ -1,0 +1,101 @@
+.feature-grid-wrapper {
+    width: 100%;
+    /* Assuming 'bg text' means a similar noise pattern or a subtle background */
+    position: relative;
+}
+
+.feature-grid-container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    width: 100%;
+}
+
+.feature-grid-row {
+    display: flex;
+    width: 100%;
+    border: 1px solid #fff;
+    /* border-bottom is managed by the last item in responsive, or if it's the actual last row */
+}
+
+.feature-grid-item {
+    flex-grow: 1;
+    flex-basis: 0; /* Allows items to grow equally */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100px; /* Example minimum height */
+    font-family: 'ChakraPetch', sans-serif; /* Added ChakraPetch back, assuming it's desired */
+    font-size: 18px;
+    font-weight: 600;
+    position: relative; /* For pseudo-elements if needed for more complex borders */
+
+}
+
+/* Borders for items - all items except the last in a row get a right border */
+.feature-grid-row .feature-grid-item:not(:last-child) {
+    border-right: 1px solid #fff;
+}
+
+/* Specific styling for the 2-item row */
+.feature-grid-row-2 .feature-grid-item {
+    flex-basis: 50%; /* Each takes 50% */
+    color: var(--color-text);
+    gap: 40px;
+    padding: 80px 40px;
+}
+
+/* Specific styling for the 3-item row */
+.feature-grid-row-3 .feature-grid-item {
+    flex-basis: calc(100% / 3); /* Each takes roughly 33.33% */
+    color: #fff;
+    gap: 30px;
+    padding: 75px 35px;
+}
+
+/* Ensuring the last item in the 3-item row doesn't get an unnecessary border-right from a general rule */
+.feature-grid-row:nth-child(2) .feature-grid-item:last-child {
+    border-right: none;
+}
+
+/* --- Responsive Styles --- */
+@media (max-width: 768px) {
+    .feature-grid-row {
+        flex-direction: column;
+        /* When rows stack, they don't need their own L/R/Top borders if items handle it */
+        /* However, the user CSS has border on row. So items will be inside this border. */
+        /* border: none; Remove row border if items create the full box */
+    }
+
+    /* Remove intra-row horizontal borders when stacking */
+    .feature-grid-row .feature-grid-item:not(:last-child) {
+        border-right: none;
+    }
+
+    /* Add bottom borders to items when stacked, except for the last item in its row */
+    .feature-grid-item {
+        border-bottom: 1px solid #fff;
+        min-height: 80px;
+        font-size: 16px;
+        padding: 15px;
+        flex-basis: 100% !important; /* Ensure full width when stacked */
+    }
+
+    .feature-grid-row .feature-grid-item:last-child {
+        border-bottom: none; /* No bottom border for the last item within a stacked row */
+    }
+    
+    /* The main row border from .feature-grid-row still applies (T, L, R, B). 
+       If border-bottom was none on .feature-grid-row, then the last item's border-bottom would be the row's bottom.
+       Given current .feature-grid-row has border: 1px solid #fff, this is fine.
+    */
+}
+
+@media (max-width: 480px) {
+    .feature-grid-item {
+        min-height: 70px;
+        font-size: 15px;
+        padding: 12px;
+    }
+} 
