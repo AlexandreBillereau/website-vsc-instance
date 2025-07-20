@@ -56,15 +56,21 @@ export default function Home() {
         <FeatureGrid3Items />
       </div>
 
-      <DetailedFeatureSection features={detailedFeaturesData} />
+      <div className="content-wrapper-dark">
+        <DetailedFeatureSection features={detailedFeaturesData} />
+      </div>
 
-      <LicenseSection />
+      <div className="content-wrapper-dark">
+        <LicenseSection />
+      </div>
 
-      <CallToActionBanner 
-        downloadUrl="#" 
-        buttonText="Download Now"
-        subText="Ready to streamline your multi-instance workflow? Get VSCode Instance Manager today!"
-      />
+      <div className="content-wrapper-dark">
+        <CallToActionBanner 
+          downloadUrl="#" 
+          buttonText="Download Now"
+          subText="Ready to streamline your multi-instance workflow? Get VSCode Instance Manager today!"
+        />
+      </div>
 
       {/* TODO: Add Final Call to Action Section */}
     </Layout>
