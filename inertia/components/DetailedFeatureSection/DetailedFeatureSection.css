@@ -67,6 +67,17 @@
     overflow: hidden;
 }
 
+.feature-detail-item svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--color-primary);
+}
+
+.feature-detail-item svg path {
+    fill: var(--color-primary);
+}
+
+
 .feature-detail-item::before {
     content: '';
     position: absolute;
